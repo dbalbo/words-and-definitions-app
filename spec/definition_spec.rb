@@ -8,14 +8,14 @@ describe('#first_def') do
 	end
 end
 
-describe('#seconddef') do
+describe('#second_def') do
 	it('returns the second definition of a word entered') do
 		test_word = Definition.new("definition1", "definition2", "definition3")
 		expect(test_word.second_def()).to(eq('definition2'))
 	end
 end	
 
-describe('#thirddef') do
+describe('#third_def') do
 	it('returns the third definition of a word entered')do
 		test_word = Definition.new("definition1", "definition2", "definition3")
 		expect(test_word.third_def()).to(eq('definition3'))
@@ -51,6 +51,16 @@ describe('#id') do
 		test_word.save()
 		expect(test_word.id()).to(eq(1))
 		end
+	end
+
+	describe('.find') do
+		it('returns a word by its id number') do
+			test_word = Definition.new("definition1", "definition2", "definition3")
+			test_word.save()
+			test_word2 =Definition.new("weird", "frustrating", "internet")
+			test_word2.save()
+			expect(Definition.find(test_word.id())).to(eq(test_word))
+		end	
 	end
 
 
