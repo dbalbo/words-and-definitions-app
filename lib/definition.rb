@@ -2,7 +2,7 @@ class Definition
 
 	@@words =[]
 
-	define_method(:initialize) do |first_def, second_def, third_def |
+	define_method(:initialize) do |first_def, second_def, third_def|
 		@first_def = first_def
 		@second_def = second_def
 		@third_def = third_def
@@ -50,16 +50,3 @@ class Definition
 	end	
 end	
 
-
-# class Definition
-
-
-
-# 	attr_reader(:definition1, :definition2, :definition3)
-
-# 	define_method(:initialize) do |attributes|
-# 		@definition1 = attributes.fetch(:definition1)
-# 		@definition2 = attributes.fetch(:definition2)
-# 		@definition3 = attributes.fetch(:definition3)
-# 	end	
-# end

@@ -1,0 +1,11 @@
+<h3> List of Word Entries</h3>
+
+<ul>
+	<% @word_entries.words().each() do |word| %>
+	<li><a href="/words/<%=word.id()%>"> <%=word.first_def()%> <%=word.second_def()%> <%=word.third_def()%> </a></li>
+	<% end %>
+</ul>
+
+
+<a href='/word_entries/ <%=@word_entries.id()%>/words/new'>Add a New Word</a>
+<a href='/'>Return to the main page</a>	

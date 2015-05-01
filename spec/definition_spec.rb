@@ -1,5 +1,6 @@
 require('rspec')
 require('definition')
+require('word')
 
 describe('#first_def') do
 	it('returns the first definition of a word entered')do
@@ -67,25 +68,3 @@ describe('#id') do
 
 
 
-
-
-# describe(Definition) do
-	
-
-# end
-
-# describe('#word') do   it('returns a definition of a word entered')do
-# test_defintiion = Defnition.new({:defintion1 => 'something spoken', :defintion2 => 'something written', :definition3 => 'something created'})
-# expect(test_defintion.word()).to(eq('something spoken'))
-# 		end
-# 	end
-
-
-
-
-
-
-	# describe ('definition2') do
-	# 	it('returns a new definition of the word entered')
-	# 	test_definition = Definition.new ('')
-	# end
