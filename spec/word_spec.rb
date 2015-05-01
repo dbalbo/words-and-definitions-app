@@ -23,3 +23,11 @@ describe('#save') do
 	end
 end
 
+describe('.clear') do
+		it('removes all terms from the array')do
+		test_term = Word.new('orange')
+		test_term.save()
+		Word.clear()
+		expect(Word.clear()).to(eq([]))
+	end
+end	

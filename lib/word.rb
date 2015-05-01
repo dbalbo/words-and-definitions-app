@@ -22,7 +22,9 @@ define_method(:save) do
 	@@terms.push(self)
 end
 
-
+define_singleton_method(:clear) do
+	@@terms = []
+end
 
 
 
