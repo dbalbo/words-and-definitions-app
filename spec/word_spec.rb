@@ -30,4 +30,12 @@ describe('.clear') do
 		Word.clear()
 		expect(Word.clear()).to(eq([]))
 	end
+end
+
+describe('#id') do
+	it('returns the id of the term') do
+		test_term = Word.new('orange')
+		test_term.save()
+	end	
 end	
+
