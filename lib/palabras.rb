@@ -1,5 +1,6 @@
 class Definition
 
+@@words =[]
 
 	define_method(:initialize) do |first, second, third|
 		@first = first
@@ -21,9 +22,17 @@ class Definition
 	end
 
 
-define_singleton_method(:all) do
-	[]
+	define_singleton_method(:all) do
+		@@words
 	end
+
+	define_method(:save) do
+		@@words.push(self)
+	end
+
+
+
+
 end	
 
 

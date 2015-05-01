@@ -27,13 +27,14 @@ describe('.all') do
 		expect(Definition.all()).to(eq([]))
 	end
 end	
-# describe('#save') do
-# 	it('adds a word to an array of saved words') do
-# 		test_word = Definition.new("definition1", "definition2", "definition3")
-# 		test_word.save
-# 		expect(Definition.all()).to(eq([test_word]))
-# 	end
-# end
+
+describe('#save') do
+	it('pushes a word into an array of saved words') do
+		test_word = Definition.new("definition1", "definition2", "definition3")
+		test_word.save()
+		expect(Definition.all()).to(eq([test_word]))
+	end
+end
 
 
 
