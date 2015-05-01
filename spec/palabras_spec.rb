@@ -1,24 +1,24 @@
 require('rspec')
 require('palabras')
 
-describe('#first') do
+describe('#first_def') do
 	it('returns the first definition of a word entered')do
 		test_word = Definition.new("definition1", "defintion2", "definition3")
-		expect(test_word.first()).to(eq("definition1"))
+		expect(test_word.first_def()).to(eq("definition1"))
 	end
 end
 
-describe('#second') do
+describe('#seconddef') do
 	it('returns the second definition of a word entered') do
 		test_word = Definition.new("definition1", "definition2", "definition3")
-		expect(test_word.second()).to(eq('definition2'))
+		expect(test_word.second_def()).to(eq('definition2'))
 	end
 end	
 
-describe('#third') do
+describe('#thirddef') do
 	it('returns the third definition of a word entered')do
 		test_word = Definition.new("definition1", "definition2", "definition3")
-		expect(test_word.third()).to(eq('definition3'))
+		expect(test_word.third_def()).to(eq('definition3'))
 	end
 end
 
@@ -29,12 +29,21 @@ describe('.all') do
 end	
 
 describe('#save') do
-	it('pushes a word into an array of saved words') do
+	it('pushes a word into an array of saved words and definitions') do
 		test_word = Definition.new("definition1", "definition2", "definition3")
 		test_word.save()
 		expect(Definition.all()).to(eq([test_word]))
 	end
 end
+
+# describe('.clear') do
+# 	it('empties out all of the saved words and defintiions')do
+# 		test_word = Definition.new("definition1", "definition2", "definition3")
+# 		test_word.save()
+# 		Definition.clear()
+# 		expect(Definition.all()).to(eq([]))
+# 	end
+# end
 
 
 

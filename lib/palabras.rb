@@ -2,23 +2,23 @@ class Definition
 
 @@words =[]
 
-	define_method(:initialize) do |first, second, third|
-		@first = first
-		@second = second
-		@third = third
+	define_method(:initialize) do |first_def, second_def, third_def |
+		@first_def = first_def
+		@second_def = second_def
+		@third_def = third_def
 	end	
 
 
-	define_method(:first) do
-		@first
+	define_method(:first_def) do
+		@first_def
 	end
 
-	define_method(:second) do
-		@second
+	define_method(:second_def) do
+		@second_def
 	end
 
-	define_method(:third) do
-		@third
+	define_method(:third_def) do
+		@third_def
 	end
 
 
@@ -30,7 +30,9 @@ class Definition
 		@@words.push(self)
 	end
 
-
+	# define__singleton_method(:clear) do
+	# 	@@words = []
+	# end
 
 
 end	
