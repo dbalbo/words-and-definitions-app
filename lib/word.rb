@@ -8,7 +8,22 @@ end
 
 define_method(:word_entry) do
 	@word_entry
-end	
+end
+
+
+define_singleton_method(:all) do
+	@@word_entry =[]
+end
+
+
+
+
+
+# define_method(:save) do
+# 	@@word_entries.push(self)
+# end
+
+
 
 
 
