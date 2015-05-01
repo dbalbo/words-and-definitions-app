@@ -36,14 +36,14 @@ describe('#save') do
 	end
 end
 
-# describe('.clear') do
-# 	it('empties out all of the saved words and defintiions')do
-# 		test_word = Definition.new("definition1", "definition2", "definition3")
-# 		test_word.save()
-# 		Definition.clear()
-# 		expect(Definition.all()).to(eq([]))
-# 	end
-# end
+describe('.clear') do
+	it('empties out all of the saved words')do
+		test_word = Definition.new("definition1", "definition2", "definition3")
+		test_word.save()
+		Definition.clear()
+		expect(Definition.all()).to(eq([]))
+	end
+end
 
 
 

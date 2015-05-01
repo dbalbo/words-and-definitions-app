@@ -1,6 +1,6 @@
 class Definition
 
-@@words =[]
+	@@words =[]
 
 	define_method(:initialize) do |first_def, second_def, third_def |
 		@first_def = first_def
@@ -30,9 +30,9 @@ class Definition
 		@@words.push(self)
 	end
 
-	# define__singleton_method(:clear) do
-	# 	@@words = []
-	# end
+	define_singleton_method(:clear) do
+		@@words = []
+	end
 
 
 end	
