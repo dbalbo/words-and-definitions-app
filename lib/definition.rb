@@ -6,6 +6,7 @@ class Definition
 		@first_def = first_def
 		@second_def = second_def
 		@third_def = third_def
+		@id =@@words.length().+(1)
 	end	
 
 
@@ -34,7 +35,9 @@ class Definition
 		@@words = []
 	end
 
-
+	define_method(:id) do
+		@id
+	end
 end	
 
 

@@ -1,5 +1,5 @@
 require('rspec')
-require('palabras')
+require('definition')
 
 describe('#first_def') do
 	it('returns the first definition of a word entered')do
@@ -44,6 +44,14 @@ describe('.clear') do
 		expect(Definition.all()).to(eq([]))
 	end
 end
+
+describe('#id') do
+	it('creates a unique id for the word so it can be found') do
+		test_word = Definition.new("definition1", "definition2", "definition3")
+		test_word.save()
+		expect(test_word.id()).to(eq(1))
+		end
+	end
 
 
 
