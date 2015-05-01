@@ -2,20 +2,29 @@ class Definition
 
 
 	define_method(:initialize) do |first, second, third|
-	@first = first
-	@second = second
-	@third = third
+		@first = first
+		@second = second
+		@third = third
 	end	
 
 
 	define_method(:first) do
 		@first
-		end
+	end
 
 	define_method(:second) do
 		@second
 	end
-end
+
+	define_method(:third) do
+		@third
+	end
+
+
+define_singleton_method(:all) do
+	[]
+	end
+end	
 
 
 # class Definition
