@@ -7,7 +7,13 @@ describe('#first') do
 		expect(test_definition.first()).to(eq("definition1"))
 	end
 end
-	
+
+describe('#second') do
+	it('returns the second definition of a word entered') do
+		test_definition = Definition.new("definition1", "definition2", "definition3")
+		expect(test_definition.second()).to(eq('definition2'))
+	end
+end	
 
 
 
