@@ -1,27 +1,26 @@
 
 class Word
 
+@@terms = []
 
-define_method(:initialize) do |word_entry|
-	@word_entry = word_entry
+
+define_method(:initialize) do |term|
+	@term = term
 end	
 
-define_method(:word_entry) do
-	@word_entry
+define_method(:term) do
+	@term
 end
 
 
 define_singleton_method(:all) do
-	@@word_entry =[]
+	@@terms 
 end
 
 
-
-
-
-# define_method(:save) do
-# 	@@word_entries.push(self)
-# end
+define_method(:save) do
+	@@terms.push(self)
+end
 
 
 
