@@ -2,6 +2,12 @@ require('rspec')
 require('definition')
 require('word')
 
+
+describe('Word') do
+before() do
+	Word.clear
+end
+
 describe('#term') do
 	it('returns the name of the entered word') do
 		test_term = Word.new("orange")
@@ -38,4 +44,43 @@ describe('#id') do
 		test_term.save()
 	end	
 end	
+
+describe('.find') do
+	it('searches for a term by its id and returns the term')do
+		test_term = Word.new('orange')
+		test_term.save()
+		test_term2 = Word.new('apple')
+		test_term2.save()
+		expect(Word.find(test_term2.id())).to(eq(test_term2))
+	end
+end
+
+describe('#add_words')do
+		it('adds a word to a specific definition') do
+			test_term = Word.new('orange')
+			test_word = Definition.new("definition1", "defintion2", "definition3")
+		  test_term.add_words(test_word)
+		  expect(test_term.words()).to(eq([test_word]))
+		 end	
+	end	
+end	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

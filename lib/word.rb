@@ -4,8 +4,11 @@ class Word
 		@@terms = []
 
 
+
 		define_method(:initialize) do |term|
 			@term = term
+			@id =@@terms.length().+(1)
+			@words = []
 		end	
 
 		define_method(:term) do
@@ -15,6 +18,17 @@ class Word
 
 		define_singleton_method(:all) do
 			@@terms 
+		end
+
+
+	define_singleton_method(:find) do |identification|
+			found_term = nil
+			@@terms.each() do |term|
+					if term.id().eql?(indentification.to_i())
+						found_term = term
+					end
+				end
+			found_term
 		end
 
 
@@ -30,35 +44,13 @@ class Word
 			@id
 		end
 
+	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		define_method(:add_words) do |word|
+			@words.push(word)	
+		end
+		
+		define_method(:words)do
+			@words
+		end	
 end
