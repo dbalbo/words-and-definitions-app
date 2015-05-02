@@ -42,6 +42,8 @@ describe('#id') do
 	it('returns the id of the term') do
 		test_term = Word.new('orange')
 		test_term.save()
+		expect(test_term.id()).to(eq(1))
+		
 	end	
 end	
 

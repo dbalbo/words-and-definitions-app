@@ -21,10 +21,10 @@ class Word
 		end
 
 
-	define_singleton_method(:find) do |identification|
+	define_singleton_method(:find) do |id|
 			found_term = nil
 			@@terms.each() do |term|
-					if term.id().eql?(indentification.to_i())
+					if term.id().eql?(id)
 						found_term = term
 					end
 				end
