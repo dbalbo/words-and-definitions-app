@@ -1,5 +1,4 @@
 require('rspec')
-require('definition')
 require('word')
 
 describe('#first_def') do

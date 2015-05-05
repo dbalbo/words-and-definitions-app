@@ -1,1 +1,17 @@
-<h1>Add a Definition to <%=@term.
+<<h1>Add a Definition to <%=@term.term %></h1> -->
+
+<form action='/words' method='post'>
+	<input id='term_id' name='term_id' type='hidden' value='<%= @term.id() %>'>
+	<label for='first_def'>First Definition:</label>
+	<input id='first_def' name='first_def' type='text'>
+
+	<label for='second_def'>Second Definition:</label>
+	<input id='second_def' name='second_def' type='text'>
+
+	<label for='third-def'>Third Definition:</label>
+	<input id='third_def' name='third_def' type='text'>
+
+	<button type="submit">Add Defintion</button>
+</form>
+
+<p><a href='/'>Back</a></p>	

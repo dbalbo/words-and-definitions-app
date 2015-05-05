@@ -31,13 +31,14 @@ post('/terms') do
 end	
 
 get('/words/:id')do
-	@word = Definition.find(params.fetch('id'))
+	@words = Definition.find(params.fetch('id'))
 	erb(:word)
 end	
 
 get('/terms/:id') do
 	@term = Word.find(params.fetch('id').to_i())
 	erb(:term)
+end	
 
 get('/terms/:id/words/new')	do
 	@term = Word.find(params.fetch('id').to_i())
@@ -48,8 +49,8 @@ post('/words') do
 	first_def = params.fetch("first_def")
 	second_def = params.fetch("second_def:")
 	third_def = params.fetch("third_def:")
-	@word = Definition.new(first_def, second_def, third_def)
-	@word.save()
+	@words = Definition.new(first_def, second_def, third_def)
+	@words.save()
 	@term = Word.find(params.fetch('term_id').to_i())
 	@term.add_words(@words)
 	@words = @term.words()
